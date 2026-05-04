@@ -1,21 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-lg-8 text-center">
-        <i class="bi bi-shop display-1 text-dark mb-4 d-block"></i>
-        <h2 class="fw-bolder">Tentang Kami</h2>
-        <p class="lead mt-4">ZenShop didirikan pada tahun 2026. Berawal dari mimpi sederhana untuk memberikan pakaian berkualitas kepada mahasiswa dan anak muda dengan harga yang logis.</p>
-        <hr class="my-5" />
-        <div class="row text-start">
-            <div class="col-md-6 mb-3">
-                <h5 class="fw-bold"><i class="bi bi-geo-alt-fill me-2"></i>Lokasi Kami</h5>
-                <p>Salatiga, Jawa Tengah<br>Indonesia</p>
-            </div>
-            <div class="col-md-6 mb-3">
-                <h5 class="fw-bold"><i class="bi bi-envelope-fill me-2"></i>Email Bisnis</h5>
-                <p>corporate@zenshop.com<br>partnership@zenshop.com</p>
-            </div>
+<div class="row justify-content-center text-center">
+    <div class="col-lg-8">
+        <h1 class="fw-bold mb-4">Mengapa ZenBlog Ada?</h1>
+        <p class="fs-5 text-secondary lh-lg mb-5">
+            Di tengah derasnya arus informasi, kami percaya bahwa tulisan yang berkualitas tetap memiliki tempat spesial untuk menginspirasi perubahan dan menyebarkan pengetahuan.
+        </p>
+    </div>
+</div>
+
+<div class="row g-4 mt-2">
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <i class="bi bi-lightbulb fs-1 text-warning mb-3"></i>
+            <h5 class="fw-bold">Edukasi</h5>
+            <p class="text-muted">Menyederhanakan konsep teknologi yang kompleks menjadi bacaan yang ringan.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <i class="bi bi-chat-heart fs-1 text-danger mb-3"></i>
+            <h5 class="fw-bold">Inspirasi</h5>
+            <p class="text-muted">Berbagi pengalaman personal untuk memotivasi sesama pembelajar digital.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm p-4 text-center rounded-4">
+            <i class="bi bi-globe fs-1 text-primary mb-3"></i>
+            <h5 class="fw-bold">Komunitas</h5>
+            <p class="text-muted">Membangun wadah diskusi sehat untuk perkembangan ekosistem IT.</p>
         </div>
     </div>
 </div>

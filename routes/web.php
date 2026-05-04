@@ -1,16 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController; // Wajib dipanggil
+use App\Http\Controllers\ArticleController;
 
-Route::get('/', function () { return view('welcome'); });
-Route::get('/about', function () { return view('about'); });
-Route::get('/contact', function () { return view('contact'); });
+// Rute Home menggunakan welcome.blade.php
+Route::get('/', function () {
+    return view('welcome');
+});
 
-// Rute CRUD Produk
-Route::get('/products', [ProductController::class, 'index']); // Menampilkan semua produk
-Route::get('/create-product', [ProductController::class, 'create']); // -> RUTE BARU: Menampilkan halaman form
-Route::post('/create-product', [ProductController::class, 'store']); // Memproses form
-Route::get('/edit-product/{id}', [ProductController::class, 'edit']);
-Route::put('/edit-product/{id}', [ProductController::class, 'update']);
-Route::delete('/delete-product/{id}', [ProductController::class, 'destroy']);
+// Rute Katalog Artikel (Halaman Terpisah yang memanggil data database)
+Route::get('/artikel', [ArticleController::class, 'index']);
+Route::get('/artikel/{id}', [ArticleController::class, 'show']);
+Route::put('/edit-article/{id}', [ArticleController::class, 'update']);
+
+// Rute Statis untuk Profil dan Kontak
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
+
+// Rute Fungsionalitas CRUD Artikel
+Route::get('/create-article', [ArticleController::class, 'create']);
+Route::post('/create-article', [ArticleController::class, 'store']);
+Route::get('/edit-article/{id}', [ArticleController::class, 'edit']);
+Route::put('/edit-article/{id}', [ArticleController::class, 'update']);
+Route::delete('/delete-article/{id}', [ArticleController::class, 'destroy']);
