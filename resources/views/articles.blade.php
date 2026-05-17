@@ -23,7 +23,7 @@
                 <span class="badge bg-primary position-absolute top-0 start-0 m-3 shadow-sm px-3 py-2 rounded-pill small">
                     {{ $article->category }}
                 </span>
-                <img src="{{ $article->image }}" class="card-img-top" alt="{{ $article->title }}" style="height: 220px; object-fit: cover;">
+                <img src="{{ asset('storage/' . $article->image) }}" class="card-img-top" alt="{{ $article->title }}">
             </div>
             
             <!-- Isi Card -->

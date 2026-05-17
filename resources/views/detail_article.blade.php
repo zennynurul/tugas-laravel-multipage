@@ -20,7 +20,7 @@
 
             <!-- Gambar Utama -->
             <figure class="mb-5">
-                <img src="{{ $article->image }}" class="img-fluid rounded-4 shadow-sm w-100" style="max-height: 450px; object-fit: cover;" alt="{{ $article->title }}">
+                <img src="{{ asset('storage/' . $article->image) }}" alt="{{ $article->title }}">
             </figure>
 
             <!-- Konten Artikel -->
